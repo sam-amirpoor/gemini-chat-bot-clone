@@ -97,8 +97,6 @@ const generateAPIResponse = async (incomingMessageDiv) => {
 
         if (!response.ok) throw new Error(data.error.message)
 
-        console.log(data)
-
         // Get the API response text
         const APIResponse = data?.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1');
         
